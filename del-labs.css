@@ -206,12 +206,14 @@ h2 { font-size: 34px; font-weight: 700; letter-spacing: -1px; line-height: 1.2; 
 
 /* ─── SERVICES ─── */
 .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-.service-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; transition: border-color 0.25s, transform 0.2s; cursor: default; }
+.service-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; transition: border-color 0.25s, transform 0.2s; cursor: pointer; text-decoration: none; display: block; }
 .service-card:hover { border-color: rgba(0,200,255,0.45); transform: translateY(-3px); }
+.service-card:hover .svc-link { color: var(--accent); }
 .svc-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
 .icon-blue{background:rgba(0,200,255,0.1)} .icon-purple{background:rgba(120,80,255,0.12)} .icon-green{background:rgba(40,202,65,0.1)} .icon-amber{background:rgba(255,189,46,0.1)} .icon-red{background:rgba(255,95,87,0.1)} .icon-teal{background:rgba(0,200,180,0.1)}
 .svc-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
-.svc-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.svc-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.svc-link { font-size: 12px; font-weight: 600; color: var(--muted); font-family: var(--mono); transition: color 0.2s; letter-spacing: 0.3px; }
 
 /* ─── IOT ─── */
 .iot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }

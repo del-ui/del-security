@@ -28,16 +28,16 @@
       <div class="form-row">
         <div class="form-group">
           <label>First name</label>
-          <input type="text" id="demo-fname" placeholder="del" />
+          <input type="text" id="demo-fname" placeholder="Jane" />
         </div>
         <div class="form-group">
           <label>Last name</label>
-          <input type="text" id="demo-lname" placeholder="labs" />
+          <input type="text" id="demo-lname" placeholder="Doe" />
         </div>
       </div>
       <div class="form-group">
         <label>Work email</label>
-        <input type="email" id="demo-email" placeholder="del-labs@company.com" />
+        <input type="email" id="demo-email" placeholder="jane@company.com" />
       </div>
       <div class="form-group">
         <label>Company</label>
@@ -59,9 +59,7 @@
         <label>Message (optional)</label>
         <textarea id="demo-message" placeholder="Tell us about your security challenges…"></textarea>
       </div>
-
       <button class="form-submit" onclick="submitDemo()">Request Demo →</button>
-      
     </div>
     <div class="success-state" id="demo-success">
       <div class="success-icon">
@@ -236,48 +234,54 @@
   <h2>Full-spectrum security<br>for the modern stack</h2>
   <p class="section-sub">From software access control to physical IoT device management — del-labs covers every layer.</p>
   <div class="services-grid">
-    <div class="service-card">
+    <a class="service-card" href="service-access-control.html">
       <div class="svc-icon icon-blue">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="3" stroke="#00C8FF" stroke-width="1.5"/><path d="M7 11h8M11 7v8" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="svc-title">Access Control Systems</div>
       <div class="svc-desc">Software-based and hardware-integrated access control — role-based permissions, multi-factor auth, and zero-trust policy enforcement.</div>
-    </div>
-    <div class="service-card">
+      <div class="svc-link">View projects →</div>
+    </a>
+    <a class="service-card" href="service-threat-detection.html">
       <div class="svc-icon icon-purple">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L4 6v5c0 4 3.2 7.7 7 8.9C14.8 18.7 18 15 18 11V6L11 3Z" stroke="#7850FF" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 11l2 2 4-4" stroke="#7850FF" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="svc-title">Threat Detection &amp; Response</div>
       <div class="svc-desc">AI-driven monitoring that identifies anomalies in real time, auto-isolates compromised nodes, and alerts your security team instantly.</div>
-    </div>
-    <div class="service-card">
+      <div class="svc-link">View projects →</div>
+    </a>
+    <a class="service-card" href="service-iot-management.html">
       <div class="svc-icon icon-teal">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#00C8B4" stroke-width="1.5"/><circle cx="11" cy="11" r="3" stroke="#00C8B4" stroke-width="1.5"/><path d="M11 4V2M11 20v-2M4 11H2M20 11h-2" stroke="#00C8B4" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="svc-title">IoT Device Management</div>
       <div class="svc-desc">Centralized visibility and control across your entire IoT fleet — firmware updates, certificate rotation, and behavioral baselines.</div>
-    </div>
-    <div class="service-card">
+      <div class="svc-link">View projects →</div>
+    </a>
+    <a class="service-card" href="service-encryption.html">
       <div class="svc-icon icon-amber">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="8" width="16" height="11" rx="2" stroke="#FFBD2E" stroke-width="1.5"/><path d="M8 8V6a3 3 0 116 0v2" stroke="#FFBD2E" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="14" r="1.5" fill="#FFBD2E"/></svg>
       </div>
       <div class="svc-title">Encryption &amp; Key Management</div>
       <div class="svc-desc">End-to-end encryption pipelines with automated key lifecycle management — ensuring data integrity from edge device to cloud.</div>
-    </div>
-    <div class="service-card">
+      <div class="svc-link">View projects →</div>
+    </a>
+    <a class="service-card" href="service-compliance.html">
       <div class="svc-icon icon-green">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h10M3 16h7" stroke="#28CA41" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="15" r="3.5" stroke="#28CA41" stroke-width="1.5"/><path d="M15.5 15l1 1 2-2" stroke="#28CA41" stroke-width="1.2" stroke-linecap="round"/></svg>
       </div>
       <div class="svc-title">Compliance &amp; Auditing</div>
       <div class="svc-desc">Automated compliance checks against ISO 27001, NIST, and IEC 62443 frameworks — with exportable audit trails and board-ready reports.</div>
-    </div>
-    <div class="service-card">
+      <div class="svc-link">View projects →</div>
+    </a>
+    <a class="service-card" href="service-pentest.html">
       <div class="svc-icon icon-red">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3v10M11 3L7 7M11 3l4 4" stroke="#FF5F57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13a6 6 0 1012 0" stroke="#FF5F57" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="svc-title">Penetration Testing</div>
       <div class="svc-desc">Red-team exercises targeting both software and IoT surfaces — exposing vulnerabilities before adversaries do, with remediation roadmaps.</div>
-    </div>
+      <div class="svc-link">View projects →</div>
+    </a>
   </div>
 </section>
 
@@ -370,11 +374,12 @@
     <div class="footer-cols">
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="#services">Access Control</a>
-        <a href="#services">Threat Detection</a>
-        <a href="#iot">IoT Management</a>
-        <a href="#services">Pen Testing</a>
-        <a href="#services">Compliance</a>
+        <a href="service-access-control.html">Access Control</a>
+        <a href="service-threat-detection.html">Threat Detection</a>
+        <a href="service-iot-management.html">IoT Management</a>
+        <a href="service-pentest.html">Pen Testing</a>
+        <a href="service-compliance.html">Compliance</a>
+        <a href="service-encryption.html">Encryption</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

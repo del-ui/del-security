@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compliance & Auditing — del-labs</title>
+  <link rel="stylesheet" href="service-shared.css"/>
+</head>
+<body>
+<div class="toast" id="toast"><div class="toast-dot" id="toast-dot"></div><span id="toast-msg"></span></div>
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('demo-modal')">✕</button>
+    <div id="demo-form-state">
+      <div class="section-tag">// BOOK A DEMO</div>
+      <h3>Request a Demo</h3>
+      <p class="modal-sub">A del-labs engineer will reach out within 24 hours.</p>
+      <div class="form-row">
+        <div class="form-group"><label>First name</label><input type="text" id="demo-fname" placeholder="Jane"/></div>
+        <div class="form-group"><label>Last name</label><input type="text" id="demo-lname" placeholder="Doe"/></div>
+      </div>
+      <div class="form-group"><label>Work email</label><input type="email" id="demo-email" placeholder="jane@company.com"/></div>
+      <div class="form-group"><label>Company</label><input type="text" id="demo-company" placeholder="Acme Corp"/></div>
+      <button class="form-submit" onclick="submitDemo()">Request Demo →</button>
+    </div>
+    <div class="success-state" id="demo-success">
+      <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#28CA41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Request received!</h3>
+      <p>We'll confirm your demo slot within 24 hours.</p>
+    </div>
+  </div>
+</div>
+<nav>
+  <a class="logo-mark" href="del-labs.html">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="8" fill="#0E1521"/>
+      <path d="M8 18L18 8L28 18L18 28L8 18Z" fill="none" stroke="#00C8FF" stroke-width="1.5"/>
+      <path d="M12 18L18 12L24 18L18 24L12 18Z" fill="rgba(0,200,255,0.15)" stroke="#00C8FF" stroke-width="1"/>
+      <circle cx="18" cy="18" r="3" fill="#00C8FF"/>
+      <path d="M18 8V6M18 30V28M8 18H6M30 18H28" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    </svg>
+    <span class="logo-text">del<span>-labs</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="del-labs.html#services">Services</a></li>
+    <li><a href="del-labs.html#iot">IoT Security</a></li>
+    <li><a href="del-labs.html#about">About</a></li>
+    <li><a href="del-labs.html" onclick="return true;">Contact</a></li>
+    <li><button class="nav-cta" onclick="openModal('demo-modal')">Get a Demo</button></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="del-labs.html">del-labs</a>
+  <span>/</span>
+  <a href="del-labs.html#services">Services</a>
+  <span>/</span>
+  <span class="current">Compliance & Auditing</span>
+</div>
+
+<div class="svc-hero">
+  <div class="svc-hero-content">
+    <div class="svc-tag">// SERVICE — COMPLIANCE</div>
+    <h1>Pass every audit.<br>Every time.</h1>
+    <p>Del-labs automates evidence collection, gap analysis, and control monitoring across ISO 27001, NIST CSF, IEC 62443, SOC 2, GDPR, and PCI-DSS — so your team spends hours on compliance, not months.</p>
+    <div class="stat-pills">
+      <div class="pill"><div class="pill-val" style="color:#28CA41">100%</div><div class="pill-lbl">Audit pass rate</div></div><div class="pill"><div class="pill-val" style="color:#28CA41">6</div><div class="pill-lbl">Frameworks covered</div></div><div class="pill"><div class="pill-val" style="color:#28CA41">−80%</div><div class="pill-lbl">Compliance effort</div></div>
+    </div>
+    <div class="hero-btns" style="margin-top:28px;">
+      <button class="btn-primary" onclick="openModal('demo-modal')">Request a Demo</button>
+      <a class="btn-ghost" href="del-labs.html#services">All Services</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="panel-label">// LIVE PROJECT SNAPSHOT</div>
+    <div style="font-size:12px;">
+    <div style="margin-bottom:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border);display:flex;justify-content:space-between">
+      <span style="color:var(--text);font-weight:500">ISO 27001</span><span style="background:rgba(40,202,65,0.12);color:#28CA41;padding:2px 8px;border-radius:4px;font-size:10px">CERTIFIED ✓</span>
+    </div>
+    <div style="margin-bottom:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border);display:flex;justify-content:space-between">
+      <span style="color:var(--text);font-weight:500">SOC 2 Type II</span><span style="background:rgba(40,202,65,0.12);color:#28CA41;padding:2px 8px;border-radius:4px;font-size:10px">CERTIFIED ✓</span>
+    </div>
+    <div style="margin-bottom:8px;padding:8px 10px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border);display:flex;justify-content:space-between">
+      <span style="color:var(--text);font-weight:500">GDPR Article 32</span><span style="background:rgba(40,202,65,0.12);color:#28CA41;padding:2px 8px;border-radius:4px;font-size:10px">COMPLIANT ✓</span>
+    </div>
+    <div style="padding:8px 10px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border);display:flex;justify-content:space-between">
+      <span style="color:var(--text);font-weight:500">PCI-DSS v4.0</span><span style="background:rgba(255,189,46,0.12);color:#FFBD2E;padding:2px 8px;border-radius:4px;font-size:10px">IN PROGRESS</span>
+    </div>
+    <div style="margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border);color:var(--muted)">
+      Controls monitored: <span style="color:#28CA41;font-weight:600">247/247</span> &nbsp;|&nbsp; Open findings: <span style="color:#FFBD2E;font-weight:600">3</span>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- PROJECTS -->
+  <div class="section-tag">// Case studies</div>
+  <h2>Featured projects</h2>
+  <p class="section-sub">Real engagements, real outcomes — anonymised where required by client NDA.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">FinTech Company</div>
+        <div class="project-title">ISO 27001 certification from scratch in 5 months</div>
+      </div>
+      <span class="project-badge badge-completed">COMPLETED</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Took the client from zero formal ISMS to a certified ISO 27001 implementation in 22 weeks. Covered 114 controls, established a risk register, and coached the internal audit team.</div>
+      <div class="project-tags"><span class="tag">ISO 27001</span><span class="tag">ISMS</span><span class="tag">Risk register</span><span class="tag">Internal audit</span><span class="tag">114 controls</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">22 weeks</div><div class="metric-lbl">To certification</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">0</div><div class="metric-lbl">Major findings</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">114</div><div class="metric-lbl">Controls implemented</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Cloud SaaS Provider</div>
+        <div class="project-title">SOC 2 Type II report for enterprise sales</div>
+      </div>
+      <span class="project-badge badge-completed">COMPLETED</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Designed and implemented the control environment required for SOC 2 (Security, Availability, Confidentiality trust service criteria). Coordinated with external auditors, resulting in a clean opinion.</div>
+      <div class="project-tags"><span class="tag">SOC 2 Type II</span><span class="tag">TSC</span><span class="tag">Control design</span><span class="tag">Auditor liaison</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">Clean</div><div class="metric-lbl">Auditor opinion</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">3</div><div class="metric-lbl">Trust criteria</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">12-month</div><div class="metric-lbl">Observation period</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Retail Group</div>
+        <div class="project-title">PCI-DSS v4.0 gap remediation</div>
+      </div>
+      <span class="project-badge badge-ongoing">ONGOING</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Assessing cardholder data environment (CDE) against PCI-DSS v4.0's new requirements, including customised approach documentation and network segmentation validation.</div>
+      <div class="project-tags"><span class="tag">PCI-DSS v4</span><span class="tag">CDE</span><span class="tag">Network segmentation</span><span class="tag">QSA liaison</span><span class="tag">Customised approach</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">v4.0</div><div class="metric-lbl">Standard</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">CDE</div><div class="metric-lbl">Scoped</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">Q3 2026</div><div class="metric-lbl">Target cert</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Manufacturing Company</div>
+        <div class="project-title">IEC 62443 compliance for OT networks</div>
+      </div>
+      <span class="project-badge badge-case">CASE STUDY</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Mapped the client's industrial control systems against IEC 62443-3-3 security levels, identified 38 gaps, and delivered a prioritised remediation roadmap with effort estimates.</div>
+      <div class="project-tags"><span class="tag">IEC 62443</span><span class="tag">OT/ICS</span><span class="tag">Security levels</span><span class="tag">Gap analysis</span><span class="tag">Roadmap</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">38</div><div class="metric-lbl">Gaps identified</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">SL2</div><div class="metric-lbl">Target achieved</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">6 months</div><div class="metric-lbl">Remediation</div></div></div>
+    </div>
+  </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- PROCESS -->
+  <div class="section-tag">// How we work</div>
+  <h2>Our engagement process</h2>
+  <p class="section-sub">Every project follows a structured four-stage methodology — from scoping to handover.</p>
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Gap Analysis</div>
+      <div class="step-desc">Map your current controls against target framework requirements.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Remediation</div>
+      <div class="step-desc">Prioritise and implement missing controls with our engineers.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Evidence</div>
+      <div class="step-desc">Automate evidence collection and build your audit-ready pack.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Certify</div>
+      <div class="step-desc">Coordinate with auditors and achieve certification / attestation.</div>
+      
+    </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- TWO-COL: TECH + FEATURES -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+    <div>
+      <div class="section-tag">// Technology stack</div>
+      <h2>Tools &amp; platforms</h2>
+      <div class="tech-grid" style="margin-top:24px;">
+        <div class="tech-card"><div class="tech-dot" style="background:#28CA41"></div><div><div class="tech-name">Vanta / Drata</div><div class="tech-role">Continuous compliance automation</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#00C8FF"></div><div><div class="tech-name">Tugboat Logic</div><div class="tech-role">GRC platform & policy management</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#FFBD2E"></div><div><div class="tech-name">OneTrust</div><div class="tech-role">Privacy & GDPR management</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#7850FF"></div><div><div class="tech-name">Qualys VMDR</div><div class="tech-role">Vulnerability management</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#00C8B4"></div><div><div class="tech-name">Jira / Confluence</div><div class="tech-role">Remediation tracking & documentation</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#7A8FAD"></div><div><div class="tech-name">Hyperproof</div><div class="tech-role">Evidence collection & audit coordination</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-tag">// Deliverables</div>
+      <h2>What you receive</h2>
+      <ul class="feature-list" style="margin-top:24px;">
+        <li>Framework gap analysis report with control mapping</li>
+<li>Risk register aligned to ISO 27005 or NIST methodology</li>
+<li>Policy and procedure documentation suite</li>
+<li>Automated evidence collection configuration</li>
+<li>Audit-ready evidence package for external auditors</li>
+<li>Post-certification continuous monitoring dashboard</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- OUTCOMES TABLE -->
+  <div class="section-tag">// Results at a glance</div>
+  <h2>Measurable outcomes</h2>
+  <table class="outcomes-table" style="margin-top:24px;">
+    <thead><tr><th>Metric</th><th>Before del-labs</th><th>After del-labs</th><th>Improvement</th></tr></thead>
+    <tbody>
+      <tr><td>Time spent on annual compliance activities</td><td>1,200+ hours</td><td>Under 240 hours</td><td style="color:#28CA41">−80% effort</td></tr>
+      <tr><td>External audit pass rate</td><td>First attempt: 60%</td><td>100% first attempt</td><td style="color:#28CA41">+40pp</td></tr>
+      <tr><td>Control coverage (target framework)</td><td>41%</td><td>100%</td><td style="color:#28CA41">Full coverage</td></tr>
+      <tr><td>Days to prepare evidence for auditor</td><td>45 days avg</td><td>Under 3 days</td><td style="color:#28CA41">Automated</td></tr>
+    </tbody>
+  </table>
+
+  <!-- OTHER SERVICES -->
+  <hr class="section-divider"/>
+  <div class="section-tag">// Explore more</div>
+  <h2>Other services</h2>
+  <div class="other-services" style="margin-top:24px;">
+    <a class="other-card" href="service-access-control.html">
+      <div class="other-card-icon icon-blue"></div>
+      <div class="other-card-title">Access Control</div>
+    </a>
+    <a class="other-card" href="service-threat-detection.html">
+      <div class="other-card-icon icon-purple"></div>
+      <div class="other-card-title">Threat Detection</div>
+    </a>
+    <a class="other-card" href="service-iot-management.html">
+      <div class="other-card-icon icon-teal"></div>
+      <div class="other-card-title">IoT Management</div>
+    </a>
+    <a class="other-card" href="service-encryption.html">
+      <div class="other-card-icon icon-amber"></div>
+      <div class="other-card-title">Encryption</div>
+    </a>
+    <a class="other-card" href="service-pentest.html">
+      <div class="other-card-icon icon-red"></div>
+      <div class="other-card-title">Pen Testing</div>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div>
+      <h3>Ready to get started?</h3>
+      <p>Book a free assessment — no commitment, no jargon.</p>
+    </div>
+    <div class="cta-strip-btns">
+      <button class="btn-primary" onclick="openModal('demo-modal')">Request a Demo</button>
+      <a class="btn-ghost" href="brief-compliance.pdf" download="brief-compliance.pdf">Download Brief</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="svc-footer">
+  <div class="svc-footer-copy">© 2026 del-labs. All rights reserved.</div>
+  <div class="svc-footer-links">
+    <a href="del-labs.html">Home</a>
+    <a href="del-labs.html#services">All Services</a>
+    <a href="del-labs.html#about">About</a>
+  </div>
+</footer>
+<script>
+function openModal(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('active');document.body.style.overflow='';}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.active').forEach(m=>closeModal(m.id));});
+function showToast(msg,type='green'){const t=document.getElementById('toast');document.getElementById('toast-dot').className='toast-dot '+type;document.getElementById('toast-msg').textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3800);}
+function isEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+function submitDemo(){
+  const fn=document.getElementById('demo-fname').value.trim();
+  const ln=document.getElementById('demo-lname').value.trim();
+  const em=document.getElementById('demo-email').value.trim();
+  const co=document.getElementById('demo-company').value.trim();
+  if(!fn||!ln){showToast('Please enter your full name.','blue');return;}
+  if(!isEmail(em)){showToast('Please enter a valid work email.','blue');return;}
+  if(!co){showToast('Please enter your company name.','blue');return;}
+  document.getElementById('demo-form-state').style.display='none';
+  document.getElementById('demo-success').style.display='block';
+  showToast('Demo request submitted!','green');
+  setTimeout(()=>closeModal('demo-modal'),4500);
+}
+</script>
+</body>
+</html>

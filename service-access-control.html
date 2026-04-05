@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Control Systems — del-labs</title>
+  <link rel="stylesheet" href="service-shared.css"/>
+</head>
+<body>
+<div class="toast" id="toast"><div class="toast-dot" id="toast-dot"></div><span id="toast-msg"></span></div>
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('demo-modal')">✕</button>
+    <div id="demo-form-state">
+      <div class="section-tag">// BOOK A DEMO</div>
+      <h3>Request a Demo</h3>
+      <p class="modal-sub">A del-labs engineer will reach out within 24 hours.</p>
+      <div class="form-row">
+        <div class="form-group"><label>First name</label><input type="text" id="demo-fname" placeholder="Jane"/></div>
+        <div class="form-group"><label>Last name</label><input type="text" id="demo-lname" placeholder="Doe"/></div>
+      </div>
+      <div class="form-group"><label>Work email</label><input type="email" id="demo-email" placeholder="jane@company.com"/></div>
+      <div class="form-group"><label>Company</label><input type="text" id="demo-company" placeholder="Acme Corp"/></div>
+      <button class="form-submit" onclick="submitDemo()">Request Demo →</button>
+    </div>
+    <div class="success-state" id="demo-success">
+      <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#28CA41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Request received!</h3>
+      <p>We'll confirm your demo slot within 24 hours.</p>
+    </div>
+  </div>
+</div>
+<nav>
+  <a class="logo-mark" href="del-labs.html">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="8" fill="#0E1521"/>
+      <path d="M8 18L18 8L28 18L18 28L8 18Z" fill="none" stroke="#00C8FF" stroke-width="1.5"/>
+      <path d="M12 18L18 12L24 18L18 24L12 18Z" fill="rgba(0,200,255,0.15)" stroke="#00C8FF" stroke-width="1"/>
+      <circle cx="18" cy="18" r="3" fill="#00C8FF"/>
+      <path d="M18 8V6M18 30V28M8 18H6M30 18H28" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    </svg>
+    <span class="logo-text">del<span>-labs</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="del-labs.html#services">Services</a></li>
+    <li><a href="del-labs.html#iot">IoT Security</a></li>
+    <li><a href="del-labs.html#about">About</a></li>
+    <li><a href="del-labs.html" onclick="return true;">Contact</a></li>
+    <li><button class="nav-cta" onclick="openModal('demo-modal')">Get a Demo</button></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="del-labs.html">del-labs</a>
+  <span>/</span>
+  <a href="del-labs.html#services">Services</a>
+  <span>/</span>
+  <span class="current">Access Control Systems</span>
+</div>
+
+<div class="svc-hero">
+  <div class="svc-hero-content">
+    <div class="svc-tag">// SERVICE — ACCESS CONTROL</div>
+    <h1>Lock down every<br>entry point.</h1>
+    <p>From software IAM to physical badge readers and biometrics — del-labs designs and deploys layered access-control architectures that enforce the principle of least privilege across your entire organisation.</p>
+    <div class="stat-pills">
+      <div class="pill"><div class="pill-val" style="color:#00C8FF">120+</div><div class="pill-lbl">Deployments</div></div><div class="pill"><div class="pill-val" style="color:#00C8FF">99.99%</div><div class="pill-lbl">Uptime</div></div><div class="pill"><div class="pill-val" style="color:#00C8FF">0</div><div class="pill-lbl">Breaches post-deploy</div></div>
+    </div>
+    <div class="hero-btns" style="margin-top:28px;">
+      <button class="btn-primary" onclick="openModal('demo-modal')">Request a Demo</button>
+      <a class="btn-ghost" href="del-labs.html#services">All Services</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="panel-label">// LIVE PROJECT SNAPSHOT</div>
+    <div style="font-size:12px;">
+    <div style="display:flex;justify-content:space-between;padding:8px 10px;background:var(--surface2);border-radius:6px;margin-bottom:8px;border:0.5px solid var(--border)">
+      <span style="color:var(--text);font-weight:500">🔐 Admin Portal</span><span style="background:rgba(40,202,65,0.12);color:#28CA41;padding:2px 8px;border-radius:4px;font-size:10px">MFA ENFORCED</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:8px 10px;background:var(--surface2);border-radius:6px;margin-bottom:8px;border:0.5px solid var(--border)">
+      <span style="color:var(--text);font-weight:500">🏢 HQ Entry Gates</span><span style="background:rgba(40,202,65,0.12);color:#28CA41;padding:2px 8px;border-radius:4px;font-size:10px">BIOMETRIC</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:8px 10px;background:var(--surface2);border-radius:6px;margin-bottom:8px;border:0.5px solid var(--border)">
+      <span style="color:var(--text);font-weight:500">☁️ Cloud IAM Roles</span><span style="background:rgba(0,200,255,0.12);color:#00C8FF;padding:2px 8px;border-radius:4px;font-size:10px">ZERO-TRUST</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:8px 10px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)">
+      <span style="color:var(--text);font-weight:500">🔑 Privileged Accounts</span><span style="background:rgba(255,189,46,0.12);color:#FFBD2E;padding:2px 8px;border-radius:4px;font-size:10px">PAM ACTIVE</span>
+    </div>
+    <div style="margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border);color:var(--muted)">
+      Active sessions: <span style="color:#00C8FF;font-weight:600">342</span> &nbsp;|&nbsp; Blocked attempts today: <span style="color:#FF5F57;font-weight:600">17</span>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- PROJECTS -->
+  <div class="section-tag">// Case studies</div>
+  <h2>Featured projects</h2>
+  <p class="section-sub">Real engagements, real outcomes — anonymised where required by client NDA.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Rafiki Manufacturing Ltd.</div>
+        <div class="project-title">Zero-Trust IAM rollout across 14 sites</div>
+      </div>
+      <span class="project-badge badge-completed">COMPLETED</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Replaced legacy VPN + shared-credential model with a full zero-trust identity framework. Integrated Okta SSO, hardware FIDO2 keys for privileged users, and per-application micro-segmentation policies.</div>
+      <div class="project-tags"><span class="tag">Zero Trust</span><span class="tag">Okta SSO</span><span class="tag">FIDO2</span><span class="tag">MFA</span><span class="tag">RBAC</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">14</div><div class="metric-lbl">Sites</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">3,200+</div><div class="metric-lbl">Users</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">0</div><div class="metric-lbl">Breach incidents</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">NairobiNet Solutions</div>
+        <div class="project-title">Physical + digital access unification</div>
+      </div>
+      <span class="project-badge badge-completed">COMPLETED</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Converged physical badge access and cloud IAM into a single identity lifecycle — one onboarding, one offboarding. New joiners provisioned in under 4 minutes.</div>
+      <div class="project-tags"><span class="tag">HID Origo</span><span class="tag">Azure AD</span><span class="tag">PAM</span><span class="tag">Just-in-time</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">4 min</div><div class="metric-lbl">Provision time</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">100%</div><div class="metric-lbl">Offboard audit</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">62%</div><div class="metric-lbl">Ticket reduction</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Regional Bank (NDA)</div>
+        <div class="project-title">Privileged Access Management for core banking</div>
+      </div>
+      <span class="project-badge badge-ongoing">ONGOING</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Deploying CyberArk PAM to vault and rotate credentials for 200+ privileged accounts across core banking systems, removing standing access entirely.</div>
+      <div class="project-tags"><span class="tag">CyberArk</span><span class="tag">Session recording</span><span class="tag">Break-glass</span><span class="tag">Audit trails</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">200+</div><div class="metric-lbl">Privileged accts</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">0</div><div class="metric-lbl">Standing access</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">100%</div><div class="metric-lbl">Session logged</div></div></div>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-card-header">
+      <div>
+        <div class="project-client">Healthcare Group</div>
+        <div class="project-title">HIPAA-aligned access control for patient data</div>
+      </div>
+      <span class="project-badge badge-case">CASE STUDY</span>
+    </div>
+    <div class="project-card-body">
+      <div class="project-desc">Designed role-based access for 800 clinical staff across 6 hospitals, with automated de-provisioning on contract end and quarterly access review workflows.</div>
+      <div class="project-tags"><span class="tag">RBAC</span><span class="tag">HIPAA</span><span class="tag">AD Groups</span><span class="tag">Access review</span></div>
+      <div class="project-metrics"><div class="metric"><div class="metric-val" style="color:#00C8FF">800</div><div class="metric-lbl">Staff covered</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">6</div><div class="metric-lbl">Hospitals</div></div><div class="metric"><div class="metric-val" style="color:#00C8FF">100%</div><div class="metric-lbl">Quarterly review</div></div></div>
+    </div>
+  </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- PROCESS -->
+  <div class="section-tag">// How we work</div>
+  <h2>Our engagement process</h2>
+  <p class="section-sub">Every project follows a structured four-stage methodology — from scoping to handover.</p>
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery</div>
+      <div class="step-desc">Audit current identity posture, map all systems and privilege levels.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Architecture</div>
+      <div class="step-desc">Design zero-trust IAM blueprint aligned to your org structure.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Deploy</div>
+      <div class="step-desc">Phased rollout — shadow mode first, then enforce, with rollback plan.</div>
+      <div class="step-connector">→</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Handover</div>
+      <div class="step-desc">Policy docs, admin training, and 90-day hypercare support.</div>
+      
+    </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- TWO-COL: TECH + FEATURES -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+    <div>
+      <div class="section-tag">// Technology stack</div>
+      <h2>Tools &amp; platforms</h2>
+      <div class="tech-grid" style="margin-top:24px;">
+        <div class="tech-card"><div class="tech-dot" style="background:#00C8FF"></div><div><div class="tech-name">Okta / Azure AD</div><div class="tech-role">Identity provider & SSO</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#7850FF"></div><div><div class="tech-name">CyberArk</div><div class="tech-role">Privileged access management</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#00C8B4"></div><div><div class="tech-name">HID Origo</div><div class="tech-role">Physical access control</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#FFBD2E"></div><div><div class="tech-name">YubiKey / FIDO2</div><div class="tech-role">Hardware MFA tokens</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#28CA41"></div><div><div class="tech-name">HashiCorp Vault</div><div class="tech-role">Secrets & credential vaulting</div></div></div>
+        <div class="tech-card"><div class="tech-dot" style="background:#7A8FAD"></div><div><div class="tech-name">SailPoint</div><div class="tech-role">Identity governance & IGA</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-tag">// Deliverables</div>
+      <h2>What you receive</h2>
+      <ul class="feature-list" style="margin-top:24px;">
+        <li>Full IAM architecture design document</li>
+<li>Implemented and tested access policies</li>
+<li>Privileged account inventory and vaulting</li>
+<li>Role matrix and RBAC policy documentation</li>
+<li>Admin runbooks and staff training materials</li>
+<li>90-day post-deploy monitoring report</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <!-- OUTCOMES TABLE -->
+  <div class="section-tag">// Results at a glance</div>
+  <h2>Measurable outcomes</h2>
+  <table class="outcomes-table" style="margin-top:24px;">
+    <thead><tr><th>Metric</th><th>Before del-labs</th><th>After del-labs</th><th>Improvement</th></tr></thead>
+    <tbody>
+      <tr><td>Mean time to provision new user</td><td>2–3 days</td><td>Under 4 minutes</td><td style="color:#28CA41">+98% faster</td></tr>
+      <tr><td>Privileged accounts with standing access</td><td>100%</td><td>0%</td><td style="color:#28CA41">Eliminated</td></tr>
+      <tr><td>Unauthorised access incidents (annual)</td><td>14 avg</td><td>0</td><td style="color:#28CA41">100% reduction</td></tr>
+      <tr><td>Offboarding audit compliance</td><td>67%</td><td>100%</td><td style="color:#28CA41">+33pp</td></tr>
+    </tbody>
+  </table>
+
+  <!-- OTHER SERVICES -->
+  <hr class="section-divider"/>
+  <div class="section-tag">// Explore more</div>
+  <h2>Other services</h2>
+  <div class="other-services" style="margin-top:24px;">
+    <a class="other-card" href="service-threat-detection.html">
+      <div class="other-card-icon icon-purple"></div>
+      <div class="other-card-title">Threat Detection</div>
+    </a>
+    <a class="other-card" href="service-iot-management.html">
+      <div class="other-card-icon icon-teal"></div>
+      <div class="other-card-title">IoT Management</div>
+    </a>
+    <a class="other-card" href="service-encryption.html">
+      <div class="other-card-icon icon-amber"></div>
+      <div class="other-card-title">Encryption</div>
+    </a>
+    <a class="other-card" href="service-compliance.html">
+      <div class="other-card-icon icon-green"></div>
+      <div class="other-card-title">Compliance</div>
+    </a>
+    <a class="other-card" href="service-pentest.html">
+      <div class="other-card-icon icon-red"></div>
+      <div class="other-card-title">Pen Testing</div>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div>
+      <h3>Ready to get started?</h3>
+      <p>Book a free assessment — no commitment, no jargon.</p>
+    </div>
+    <div class="cta-strip-btns">
+      <button class="btn-primary" onclick="openModal('demo-modal')">Request a Demo</button>
+      <a class="btn-ghost" href="brief-access-control.pdf" download="brief-access-control.pdf">Download Brief</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="svc-footer">
+  <div class="svc-footer-copy">© 2026 del-labs. All rights reserved.</div>
+  <div class="svc-footer-links">
+    <a href="del-labs.html">Home</a>
+    <a href="del-labs.html#services">All Services</a>
+    <a href="del-labs.html#about">About</a>
+  </div>
+</footer>
+<script>
+function openModal(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('active');document.body.style.overflow='';}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.active').forEach(m=>closeModal(m.id));});
+function showToast(msg,type='green'){const t=document.getElementById('toast');document.getElementById('toast-dot').className='toast-dot '+type;document.getElementById('toast-msg').textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3800);}
+function isEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+function submitDemo(){
+  const fn=document.getElementById('demo-fname').value.trim();
+  const ln=document.getElementById('demo-lname').value.trim();
+  const em=document.getElementById('demo-email').value.trim();
+  const co=document.getElementById('demo-company').value.trim();
+  if(!fn||!ln){showToast('Please enter your full name.','blue');return;}
+  if(!isEmail(em)){showToast('Please enter a valid work email.','blue');return;}
+  if(!co){showToast('Please enter your company name.','blue');return;}
+  document.getElementById('demo-form-state').style.display='none';
+  document.getElementById('demo-success').style.display='block';
+  showToast('Demo request submitted!','green');
+  setTimeout(()=>closeModal('demo-modal'),4500);
+}
+</script>
+</body>
+</html>
